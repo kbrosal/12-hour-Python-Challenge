@@ -1,6 +1,11 @@
 def calculate():
-    num1 = float(input("Enter the first number: "))
-    num2 = float(input("Enter the second number: "))
+    try:
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+    except ValueError as Err:
+        print("Invalid input. Please enter a valid number.")
+        return calculate()
+    
     operation = input("Enter the operation (add, subtract, multiply, divide): ")
 
     if operation == 'add':
