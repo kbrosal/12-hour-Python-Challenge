@@ -2,7 +2,7 @@ def calculate():
     try:
         num1 = float(input("Enter the first number: "))
         num2 = float(input("Enter the second number: "))
-    except ValueError as Err:
+    except ValueError:
         print("Invalid input. Please enter a valid number.")
         return calculate()
     
@@ -22,7 +22,4 @@ def calculate():
         return "Invalid operation"
     
 print(f"Results: {calculate()}")
-
-
-
 
